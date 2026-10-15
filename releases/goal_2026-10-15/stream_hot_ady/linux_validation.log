@@ -1,0 +1,13 @@
+LINUX_GUEST_BEGIN
+ZIP_CREATE_SYSTEM=3 EXTRACTED_MODE=755 ZIP_CRC=PASS
+CASE_BEGIN_default
+rows=1000000 cpu_seconds=9.897558 wall_seconds=14.206199 cache_enabled=0 cache_entries=0 cache_hits=0 cache_disable_reason=none
+VmPeak_kB=516696 VmHWM_kB=511756
+output_sha256=aed1ab844b51288f0d3a41c42baac67e348b7b3128a050f0914db1752512b0ad
+CASE_PASS_default
+CASE_BEGIN_no_cache
+rows=1000000 cpu_seconds=10.181424 wall_seconds=14.760785 cache_enabled=0 cache_entries=0 cache_hits=0 cache_disable_reason=none
+VmPeak_kB=516696 VmHWM_kB=511740
+output_sha256=aed1ab844b51288f0d3a41c42baac67e348b7b3128a050f0914db1752512b0ad
+CASE_PASS_no_cache
+NEW_PACKAGE_LINUX_PASSED

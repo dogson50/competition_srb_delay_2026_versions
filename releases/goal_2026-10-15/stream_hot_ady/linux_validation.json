@@ -1,0 +1,30 @@
+{
+  "status": "passed",
+  "package": "releases/goal_2026-10-15/stream_hot_ady/submission_stream_hot_ady_linux.zip",
+  "package_sha256": "6138416f4a76658aa5d8f447fb41c7bd9d6a7063828061617577e677652e8ff5",
+  "binary_sha256": "1e4e07f0bd2a2f4f05958eed159778429df0acc1144d48e2208e6c07112662c7",
+  "request_sha256": "2d3350b1aed4b7489fbd2fc361b2d680a422db218159a07938782ed850b4c19f",
+  "expected_output_sha256": "aed1ab844b51288f0d3a41c42baac67e348b7b3128a050f0914db1752512b0ad",
+  "zip_create_system": 3,
+  "extracted_mode": "0755",
+  "zip_crc_pass": true,
+  "cases": {
+    "default": {
+      "rows": 1000000,
+      "output_sha256": "aed1ab844b51288f0d3a41c42baac67e348b7b3128a050f0914db1752512b0ad",
+      "vm_peak_kib": 516696,
+      "vm_hwm_kib": 511756,
+      "cpu_seconds_qemu": 9.897558
+    },
+    "no_cache": {
+      "rows": 1000000,
+      "output_sha256": "aed1ab844b51288f0d3a41c42baac67e348b7b3128a050f0914db1752512b0ad",
+      "vm_peak_kib": 516696,
+      "vm_hwm_kib": 511740,
+      "cpu_seconds_qemu": 10.181424
+    }
+  },
+  "qemu_kernel_append_extra": "noapic",
+  "official_server_tested": false,
+  "evidence_log": "releases/goal_2026-10-15/stream_hot_ady/linux_validation.log"
+}

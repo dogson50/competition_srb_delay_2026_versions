@@ -1,0 +1,38 @@
+{
+  "candidate": "stream_hot_ady",
+  "status": "candidate_ready_for_manual_upload",
+  "created_at": "2026-10-15",
+  "package": "releases/goal_2026-10-15/stream_hot_ady/submission_stream_hot_ady_linux.zip",
+  "package_bytes": 90103108,
+  "package_sha256": "6138416f4a76658aa5d8f447fb41c7bd9d6a7063828061617577e677652e8ff5",
+  "binary_bytes": 97161744,
+  "binary_sha256": "1e4e07f0bd2a2f4f05958eed159778429df0acc1144d48e2208e6c07112662c7",
+  "source": "source/stream_hot_ady/estimate.cpp",
+  "source_sha256": "5c827e56aa01100f9af300f56292c38bc5b27f9d9972bd2ffb9a06ab3f1eaa49",
+  "correction_header_sha256": "cdb8ee829ec67e141e328dc74d5629708300a734976f4a5f939f86b00576dd44",
+  "model_sha256": "7fca5445bfc09f27f7a07961f99db2f39f3dc5cc4710c8423f6246884d562605",
+  "changes": [
+    "Keeps the rank-12 fixed-stride HOT_TERMS path",
+    "Uses an 8 MiB streaming request reader instead of whole-file mmap",
+    "Uses the full ADY residual correction table",
+    "Defaults to no-cache while retaining bounded adaptive cache support"
+  ],
+  "public_validation": {
+    "rows": 1000000,
+    "accuracy_score": 98.53136505450432,
+    "output_sha256": "aed1ab844b51288f0d3a41c42baac67e348b7b3128a050f0914db1752512b0ad",
+    "default_and_no_cache_predictions_identical": true
+  },
+  "linux_validation": {
+    "status": "passed",
+    "report": "releases/goal_2026-10-15/stream_hot_ady/linux_validation.json",
+    "scope": "Exact packaged ELF extracted by Info-ZIP and run under Alpine Linux QEMU; both default and --no-cache public million-row cases",
+    "memory_peak_vm_kib": 516696,
+    "memory_peak_hwm_kib": 511756,
+    "qemu_kernel_append_extra": "noapic"
+  },
+  "official_score": null,
+  "official_server_tested": false,
+  "automatic_upload": false,
+  "rollback": "releases/goal_2026-10-15/hot_ptr/submission_joint_rank12_hot_ptr_linux.zip"
+}

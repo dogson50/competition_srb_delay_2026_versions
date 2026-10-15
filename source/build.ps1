@@ -1,6 +1,6 @@
 param(
     [Parameter(Mandatory = $true)]
-    [ValidateSet('hot_ptr', 'lazy_ady', 'lrintf', 'cache_repair')]
+    [ValidateSet('hot_ptr', 'lazy_ady', 'lrintf', 'cache_repair', 'stream_hot_ady')]
     [string]$Variant,
     [ValidateSet('linux', 'windows')]
     [string]$Target = 'linux',
@@ -36,8 +36,8 @@ if ($Variant -eq 'hot_ptr') {
 }
 $cppFlags = @('-target', $triple, "-mcpu=$cpu", '-std=c++17', '-O3', '-DNDEBUG',
               '-fno-fast-math', '-ffp-contract=off', '-I', $common)
-if ($Variant -eq 'hot_ptr') { $cppFlags += '-DHOT_TERMS' }
-if ($Variant -eq 'hot_ptr' -and $Target -eq 'linux') { $cppFlags += '-static' }
+if ($Variant -in @('hot_ptr', 'stream_hot_ady')) { $cppFlags += '-DHOT_TERMS' }
+if ($Variant -in @('hot_ptr', 'stream_hot_ady') -and $Target -eq 'linux') { $cppFlags += '-static' }
 
 # .incbin resolves the model path from the compiler's working directory.
 Push-Location $common

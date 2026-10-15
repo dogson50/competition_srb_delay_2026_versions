@@ -56,6 +56,18 @@
         "consistency_score": 100
       },
       "official_score_evidence": "releases/goal_2026-10-14/cache_repair/official_evaluation.json"
+    },
+    {
+      "name": "stream_hot_ady",
+      "official_server_tested": false,
+      "source": "source/stream_hot_ady/estimate.cpp",
+      "source_provenance": "hot_ptr_rank12_hot_path_with_bounded_streaming_input",
+      "package": "releases/goal_2026-10-15/stream_hot_ady/submission_stream_hot_ady_linux.zip",
+      "package_sha256": "6138416f4a76658aa5d8f447fb41c7bd9d6a7063828061617577e677652e8ff5",
+      "binary_sha256": "1e4e07f0bd2a2f4f05958eed159778429df0acc1144d48e2208e6c07112662c7",
+      "public_score": 98.53136505450432,
+      "linux_validation": "passed",
+      "linux_validation_report": "releases/goal_2026-10-15/stream_hot_ady/linux_validation.json"
     }
   ]
 }
