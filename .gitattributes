@@ -1,0 +1,3 @@
+source/** text eol=lf
+source/common/joint_model.bin.z binary
+*.zip binary

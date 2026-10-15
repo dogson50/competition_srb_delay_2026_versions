@@ -1,6 +1,6 @@
 # SRB delay estimator release bundle
 
-This repository contains three upload-ready Linux submission archives from
+This repository contains inference sources, model assets, and three Linux submission archives from
 2026-10-15. Each archive contains one static x86-64 executable at
 `bin/estimate` and is below the competition upload limit.
 
@@ -12,3 +12,20 @@ This repository contains three upload-ready Linux submission archives from
 
 The official server has not scored these three packages. The `candidate.json`
 files record the validation scope, public output hash, and rollback package.
+
+## Sources And Build
+
+See [source/README.md](source/README.md) for Chinese build instructions,
+version differences, validation scope, and source provenance.
+
+| Version | Inference Source | Build |
+|---|---|---|
+| hot_ptr | [estimate.cpp](source/hot_ptr/estimate.cpp) | `./source/build.ps1 -Variant hot_ptr` |
+| lazy_ady | [estimate.cpp](source/lazy_ady/estimate.cpp) | `./source/build.ps1 -Variant lazy_ady` |
+| lrintf | [estimate.cpp](source/lrintf/estimate.cpp) | `./source/build.ps1 -Variant lrintf` |
+
+The snapshots share `source/common/` model assets and miniz dependencies.
+Build outputs go to the ignored `build/` directory. See
+[build_validation.json](source/build_validation.json) for rebuilt ELF checks.
+The original submission archives are preserved; debug-path changes can change
+the rebuilt file hash even when all allocated ELF sections match.

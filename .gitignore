@@ -1,8 +1,20 @@
-# This repository is an audited release bundle, not the full experiment tree.
+# Curated submission packages and their inference sources.
 *
 !.gitignore
+!.gitattributes
 !VERSION_INDEX.md
 !VERSION_INDEX.json
+!source/
+!source/**/
+!source/**/*.cpp
+!source/**/*.hpp
+!source/**/*.c
+!source/**/*.h
+!source/*.md
+!source/*.ps1
+!source/*.py
+!source/*.json
+!source/common/joint_model.bin.z
 !releases/
 !releases/goal_2026-10-15/
 !releases/goal_2026-10-15/hot_ptr/

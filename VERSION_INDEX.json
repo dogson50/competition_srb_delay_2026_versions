@@ -1,10 +1,15 @@
 {
   "created_at": "2026-10-15",
-  "purpose": "Curated Git release bundle for manual submission",
+  "purpose": "Curated submission packages with inference sources and shared model assets",
+  "source_documentation": "source/README.md",
+  "build_script": "source/build.ps1",
+  "build_validation": "source/build_validation.json",
   "official_server_tested": false,
   "versions": [
     {
       "name": "hot_ptr",
+      "source": "source/hot_ptr/estimate.cpp",
+      "source_provenance": "preserved_experiment_snapshot",
       "package": "releases/goal_2026-10-15/hot_ptr/submission_joint_rank12_hot_ptr_linux.zip",
       "package_sha256": "07b956ce5b7b14ed5d6c462891f95d50d22940e9d3bb726662a7cdc0de4bb284",
       "binary_sha256": "9299ec96e497509e388881114e735cd2f45e53654fa7650dcf2576559e4db747",
@@ -13,6 +18,8 @@
     },
     {
       "name": "lazy_ady",
+      "source": "source/lazy_ady/estimate.cpp",
+      "source_provenance": "preserved_release_snapshot",
       "package": "releases/goal_2026-10-15/lazy_ady/submission_joint_rank12_lazy_ady_linux.zip",
       "package_sha256": "4ae3c648303de96200892cb8bf8b21d80a873c3905485c708779f5b6bb684ded",
       "binary_sha256": "905ec276d4ddb9657b9086eff5a8c151d5c4c14e4ebc0828e3378dfe4c338b3a",
@@ -21,6 +28,8 @@
     },
     {
       "name": "lrintf",
+      "source": "source/lrintf/estimate.cpp",
+      "source_provenance": "restored_from_lazy_ady_and_recorded_rounding_and_parser_patches",
       "package": "releases/goal_2026-10-15/lrintf/submission_joint_rank12_lrintf_linux.zip",
       "package_sha256": "a3cd1498e1a292dbc77a5c4c9634a8dcae01df12829012e1748cc8deeeed82ff",
       "binary_sha256": "52e4583f3cf4408f3663dd2e59271a1a418c15371b301353cb9289ef43f22c7c",
