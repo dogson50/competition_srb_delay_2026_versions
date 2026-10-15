@@ -1,0 +1,51 @@
+{
+  "candidate": "joint_rank12_hot_ptr_linux",
+  "status": "candidate_ready_for_manual_upload",
+  "created_at": "2026-10-15",
+  "package": "releases/goal_2026-10-15/hot_ptr/submission_joint_rank12_hot_ptr_linux.zip",
+  "package_bytes": 90071802,
+  "package_sha256": "07b956ce5b7b14ed5d6c462891f95d50d22940e9d3bb726662a7cdc0de4bb284",
+  "binary_bytes": 97156760,
+  "binary_sha256": "9299ec96e497509e388881114e735cd2f45e53654fa7650dcf2576559e4db747",
+  "model_source": "experiments/runtime_opt_2026_10_14/cache_fix/joint_model.bin.z",
+  "model_sha256": "7fca5445bfc09f27f7a07961f99db2f39f3dc5cc4710c8423f6246884d562605",
+  "coverage": "full 208x256 JNTMG1 profile table",
+  "public_validation": {
+    "rows": 1000000,
+    "output_sha256": "aed1ab844b51288f0d3a41c42baac67e348b7b3128a050f0914db1752512b0ad",
+    "accuracy_score": 98.53136505450432,
+    "expected_output_sha256": "aed1ab844b51288f0d3a41c42baac67e348b7b3128a050f0914db1752512b0ad",
+    "unchanged_predictions": true
+  },
+  "runtime_experiment": {
+    "change": "fixed JNTMG1 rank-12 term row stride (552*31) in hot path",
+    "windows_no_cache_cpu_seconds": {
+      "baseline_median": 1.109375,
+      "candidate_median": 1.09375,
+      "baseline_runs": 8,
+      "candidate_runs": 8
+    },
+    "comparison_note": "Local Windows result only; official CPU timing remains unknown."
+  },
+  "format_validation": {
+    "zip_entries": [
+      "bin/estimate"
+    ],
+    "zip_crc": true,
+    "zip_create_system": 3,
+    "executable_mode": "0755",
+    "static_elf": true,
+    "elf_machine": 62,
+    "package_limit": true
+  },
+  "linux_validation": {
+    "status": "passed",
+    "report": "releases/goal_2026-10-15/hot_ptr/linux_validation.json",
+    "scope": "Exact packaged ELF under isolated portable QEMU Alpine; default and --no-cache public million-row output hash checks",
+    "official_server_tested": false
+  },
+  "official_score": null,
+  "official_server_tested": false,
+  "automatic_upload": false,
+  "rollback": "releases/goal_2026-10-15/lazy_ady/submission_joint_rank12_lazy_ady_linux.zip"
+}

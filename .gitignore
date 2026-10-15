@@ -1,0 +1,10 @@
+# This repository is an audited release bundle, not the full experiment tree.
+*
+!.gitignore
+!VERSION_INDEX.md
+!VERSION_INDEX.json
+!releases/
+!releases/goal_2026-10-15/
+!releases/goal_2026-10-15/hot_ptr/
+!releases/goal_2026-10-15/lazy_ady/
+!releases/goal_2026-10-15/lrintf/

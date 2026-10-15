@@ -1,0 +1,57 @@
+{
+  "candidate": "joint_rank12_lazy_mmap_ady_hot_linux",
+  "status": "candidate_ready_for_manual_upload",
+  "created_at": "2026-10-15",
+  "package": "releases/goal_2026-10-15/lazy_ady/submission_joint_rank12_lazy_ady_linux.zip",
+  "package_bytes": 90100564,
+  "package_sha256": "4ae3c648303de96200892cb8bf8b21d80a873c3905485c708779f5b6bb684ded",
+  "binary_bytes": 97157048,
+  "binary_sha256": "905ec276d4ddb9657b9086eff5a8c151d5c4c14e4ebc0828e3378dfe4c338b3a",
+  "model_source": "experiments/runtime_opt_2026_10_14/cache_fix/joint_model.bin.z",
+  "model_sha256": "7fca5445bfc09f27f7a07961f99db2f39f3dc5cc4710c8423f6246884d562605",
+  "model_profiles": 53248,
+  "coverage": "full 208x256 JNTMG1 profile table; generic model remains a lazy fallback",
+  "accuracy": {
+    "public_rows": 1000000,
+    "public_score": 98.53136505450432,
+    "public_mae": 7.41222,
+    "public_bias": -2.827884,
+    "public_output_sha256": "aed1ab844b51288f0d3a41c42baac67e348b7b3128a050f0914db1752512b0ad",
+    "baseline_public_score": 98.51847795633321
+  },
+  "runtime": {
+    "change": "mmap input, lazy generic-model construction, JNTMG1 hot path, no-cache default",
+    "windows_public_cpu_seconds_median": 1.1953125,
+    "windows_baseline_cpu_seconds_median": 1.2265625,
+    "windows_interleaved_runs": 6,
+    "linux_qemu_default_vmpeak_kib": 516696,
+    "linux_qemu_default_vmhwm_kib": 511748,
+    "official_cpu_seconds": null,
+    "official_speedup_established": false
+  },
+  "format_validation": {
+    "zip_entries": ["bin/estimate"],
+    "zip_crc": true,
+    "zip_create_system": 3,
+    "executable_mode": "0o755",
+    "static_elf": true,
+    "elf_machine": 62,
+    "package_limit": true
+  },
+  "linux_validation": {
+    "status": "passed",
+    "scope": "Info-ZIP extraction, permission, exact public hash, default/no-cache, and QEMU memory audit",
+    "report": "experiments/cache_permission_audit_2026_10_14/linux_zip_permission_validation_lazy_ady.json",
+    "official_server_tested": false
+  },
+  "official_score": null,
+  "official_server_tested": false,
+  "automatic_upload": false,
+  "rollback": "releases/goal_2026-10-14/mmap_full_coverage/submission_joint_rank12_mmap_full_coverage_linux.zip",
+  "accuracy_correction": {
+    "key": "target category,cross-column flag,abs(dx)//10,abs(dy)//12",
+    "entries": 6624,
+    "fit": "public residual median; source-state holdout score estimate 98.5221"
+  },
+  "risk": "The fast parser accepts the official canonical port spellings; an unknown non-canonical port now fails instead of constructing the generic model for name lookup."
+}

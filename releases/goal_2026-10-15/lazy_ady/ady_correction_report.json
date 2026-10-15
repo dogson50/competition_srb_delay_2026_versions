@@ -1,0 +1,13 @@
+{
+  "rows": 1000000,
+  "table_entries": 6624,
+  "supported_bins": 4523,
+  "delta_nonzero": 2689,
+  "public_baseline_score": 98.51847795633321,
+  "median_table_approx_score": 98.53126701283726,
+  "median_table_approx_mae": 7.412206,
+  "source_state_holdout_score_estimate": 98.52209947673164,
+  "source_state_holdout_baseline": 98.51847795633321,
+  "old_header_sha256": "dbeb3de2aed4e47db7fc52832da2d70184405e19f4afc26a1f5fbdd6be31b466",
+  "new_header_sha256": "cdb8ee829ec67e141e328dc74d5629708300a734976f4a5f939f86b00576dd44"
+}

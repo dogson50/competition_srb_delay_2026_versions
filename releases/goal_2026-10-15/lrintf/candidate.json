@@ -1,0 +1,50 @@
+{
+  "candidate": "joint_rank12_lrintf_full_coverage_linux",
+  "status": "candidate_ready_for_manual_upload",
+  "created_at": "2026-10-15",
+  "package": "releases/goal_2026-10-15/lrintf/submission_joint_rank12_lrintf_linux.zip",
+  "package_bytes": 90071810,
+  "package_sha256": "a3cd1498e1a292dbc77a5c4c9634a8dcae01df12829012e1748cc8deeeed82ff",
+  "binary_bytes": 97156424,
+  "binary_sha256": "52e4583f3cf4408f3663dd2e59271a1a418c15371b301353cb9289ef43f22c7c",
+  "model_source": "experiments/runtime_opt_2026_10_14/cache_fix/joint_model.bin.z",
+  "model_sha256": "7fca5445bfc09f27f7a07961f99db2f39f3dc5cc4710c8423f6246884d562605",
+  "coverage": "full 208x256 JNTMG1 profile table",
+  "public_validation": {
+    "rows": 1000000,
+    "output_sha256": "aed1ab844b51288f0d3a41c42baac67e348b7b3128a050f0914db1752512b0ad",
+    "expected_output_sha256": "aed1ab844b51288f0d3a41c42baac67e348b7b3128a050f0914db1752512b0ad",
+    "accuracy_score": 98.53136505450432,
+    "unchanged_predictions": true
+  },
+  "runtime_experiment": {
+    "change": "lrintf nearest-integer conversion and inlined coordinate parser",
+    "baseline_output_hash_unchanged": true,
+    "native_public_cpu_seconds": [
+      1.265625,
+      1.5625,
+      1.203125
+    ],
+    "comparison_note": "No stable material CPU reduction was established on Windows; retain as an optional exact-output build."
+  },
+  "format_validation": {
+    "zip_entries": [
+      "bin/estimate"
+    ],
+    "zip_crc": true,
+    "zip_create_system": 3,
+    "executable_mode": "0755",
+    "static_elf": true,
+    "elf_machine": 62,
+    "package_limit": true
+  },
+  "linux_validation": {
+    "status": "passed",
+    "report": "releases/goal_2026-10-15/lrintf/linux_validation.json",
+    "scope": "packaged ELF, default and --no-cache, exact public output hash under isolated QEMU Alpine"
+  },
+  "official_score": null,
+  "official_server_tested": false,
+  "automatic_upload": false,
+  "rollback": "releases/goal_2026-10-15/lazy_ady/submission_joint_rank12_lazy_ady_linux.zip"
+}
