@@ -1,0 +1,19 @@
+{
+  "recorded_at": "2026-10-15",
+  "evaluation_log_date": "2026-10-14",
+  "version": "cache_repair",
+  "package": "submission_joint_rank12_stream_cache_safe_linux.zip",
+  "package_sha256": "73fef4f1c9e6b1465e6518a712752aaabb0a0898a045dd3845208a2c1e53b3a5",
+  "scores_file": "official_scores.json",
+  "report_file": "official_report.json",
+  "source": "Preserved official scoring_result (1).zip reports in outputs/scoring_latest and user-provided scoring log dated 2026-10-14 12:48:54",
+  "package_attribution": "Associated with this submission by the recorded conversation; the official score and report files do not contain a submission ZIP SHA-256",
+  "candidate_metadata": "candidate.json predates the official evaluation; its pending/null score fields are preserved as historical metadata",
+  "total_score": 94.48950037656283,
+  "accuracy_score": 98.50993276237018,
+  "time_score": 71.21036111111111,
+  "consistency_score": 100,
+  "cpu_time_ms": 518213.5,
+  "tasks_succeeded": 2,
+  "task_peak_memory_kib": 531216
+}

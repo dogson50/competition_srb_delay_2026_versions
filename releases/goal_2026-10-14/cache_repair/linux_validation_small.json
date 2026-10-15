@@ -1,0 +1,68 @@
+{
+  "status": "passed",
+  "scope": "Info-ZIP Linux extraction and exact packaged ELF under QEMU, not native runtime timing",
+  "original": {
+    "path": "releases\\goal_2026-10-11\\cache_candidate\\submission_joint_rank12_all208_tp_cross_adx_r12_cache_linux.zip",
+    "sha256": "01805151dcd5d81e67ce6ff2855389883acef7a93e949aa1930f6ead69eb25d8",
+    "create_system": 0,
+    "external_mode": "0o100755",
+    "binary_sha256": "b6e2771a6b0485d6298e86dabec588a24ce8ec5456902cd59352a3c38cce1d45",
+    "crc_pass": true
+  },
+  "same_binary_unix_origin": {
+    "path": "experiments\\cache_permission_audit_2026_10_14\\same_binary_unix_origin.zip",
+    "sha256": "06184dc1c149efda93c45fdad95a2efca342abd573c2a8d54b089af0819ed233",
+    "create_system": 3,
+    "external_mode": "0o100755",
+    "binary_sha256": "b6e2771a6b0485d6298e86dabec588a24ce8ec5456902cd59352a3c38cce1d45",
+    "crc_pass": true
+  },
+  "new_package": {
+    "path": "releases\\goal_2026-10-14\\cache_repair\\submission_joint_rank12_stream_cache_safe_linux.zip",
+    "sha256": "73fef4f1c9e6b1465e6518a712752aaabb0a0898a045dd3845208a2c1e53b3a5",
+    "create_system": 3,
+    "external_mode": "0o100755",
+    "binary_sha256": "56b6ad1941c48faf0b6d9fdd905ad41292c675f0e0616af3d0b1afacc96c328e",
+    "crc_pass": true
+  },
+  "linux_tools": [
+    {
+      "package": "unzip-6.0-r16.apk",
+      "url": "https://dl-cdn.alpinelinux.org/alpine/latest-stable/main/x86_64/unzip-6.0-r16.apk",
+      "sha256": "e05e00290af872b3c8a313d6490ef53697f8b9921ef9eea999ff7d93643caf28",
+      "files": [
+        {
+          "path": "usr/bin/unzip",
+          "bytes": 149448,
+          "sha256": "f6af5b00d5903dff1ce4252d84c6641b47595813970c1a77a34f96850a087996"
+        }
+      ]
+    },
+    {
+      "package": "musl-1.2.6-r2.apk",
+      "url": "https://dl-cdn.alpinelinux.org/alpine/latest-stable/main/x86_64/musl-1.2.6-r2.apk",
+      "sha256": "573712e2f49c15bfc20a2699f204acdfc74c772722b15e7353d768057fae0e71",
+      "files": [
+        {
+          "path": "lib/ld-musl-x86_64.so.1",
+          "bytes": 670312,
+          "sha256": "38d022ce7425ff105ccfb53598f606e6e5f5f0a34bfbc793d65e6f34c9d72806"
+        }
+      ]
+    }
+  ],
+  "guest_memory_mib": 1536,
+  "network": false,
+  "host_disk_or_share": false,
+  "request_sha256": "58c302b64436b5f66dfd8af186f5c91b85d9a114c85041472a64099b2b7f71b8",
+  "expected_output_sha256": "1fdbfef88a3ce76cad20685d66946e01bc22a46f3ed25fa72b778b50b59cbbdc",
+  "invocation": [
+    "C:/Program Files/Git/usr/bin/bash.exe",
+    "-lc",
+    "cd D:/EDA_project/competition_srb_delay_2026/experiments/official_validation_2026_10_09/portable_linux/msys_current/ucrt64/bin; export PATH=\"$PWD:/c/Windows/system32\"; exec ./qemu-system-x86_64.exe -L ../share/qemu -machine pc -accel tcg,thread=single -cpu qemu64 -smp 1 -m 1536 -display none -serial stdio -monitor none -nic none -no-reboot -kernel D:/EDA_project/competition_srb_delay_2026/experiments/official_validation_2026_10_09/portable_linux/downloads/vmlinuz-virt -initrd D:/EDA_project/competition_srb_delay_2026/experiments/cache_permission_audit_2026_10_14/permission_audit_initramfs.cpio.gz -append 'console=ttyS0 rdinit=/init panic=1 quiet'"
+  ],
+  "official_uploaded": false,
+  "returncode": 0,
+  "log_sha256": "99ea9ff205dcb783ce11fc12e3d774c287ae777b56e60d862a3310e1c7f88c50",
+  "wall_seconds_emulated": 27.651617600000463
+}

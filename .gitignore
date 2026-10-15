@@ -16,6 +16,8 @@
 !source/*.json
 !source/common/joint_model.bin.z
 !releases/
+!releases/goal_2026-10-14/
+!releases/goal_2026-10-14/cache_repair/
 !releases/goal_2026-10-15/
 !releases/goal_2026-10-15/hot_ptr/
 !releases/goal_2026-10-15/lazy_ady/

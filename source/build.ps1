@@ -1,6 +1,6 @@
 param(
     [Parameter(Mandatory = $true)]
-    [ValidateSet('hot_ptr', 'lazy_ady', 'lrintf')]
+    [ValidateSet('hot_ptr', 'lazy_ady', 'lrintf', 'cache_repair')]
     [string]$Variant,
     [ValidateSet('linux', 'windows')]
     [string]$Target = 'linux',

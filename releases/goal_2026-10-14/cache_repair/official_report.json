@@ -1,0 +1,26 @@
+{
+  "total_score": 94.48950037656283,
+  "accuracy_score": 98.50993276237018,
+  "time_score": 71.21036111111111,
+  "consistency_score": 100,
+  "task": [
+    {
+      "task_status": "success",
+      "task_cpu_time": 522368,
+      "task_user_cpu_time": 504482,
+      "task_system_cpu_time": 17886,
+      "task_real_time": 522403,
+      "task_peak_memory": 531216,
+      "task_result_checksum": "cb1c68bda9b40db82ef6dcf5ed0b3316"
+    },
+    {
+      "task_status": "success",
+      "task_cpu_time": 514059,
+      "task_user_cpu_time": 491602,
+      "task_system_cpu_time": 22457,
+      "task_real_time": 514167,
+      "task_peak_memory": 531216,
+      "task_result_checksum": "cb1c68bda9b40db82ef6dcf5ed0b3316"
+    }
+  ]
+}

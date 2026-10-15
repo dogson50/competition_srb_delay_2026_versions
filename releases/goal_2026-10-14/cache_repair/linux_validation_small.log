@@ -1,0 +1,39 @@
+LINUX_GUEST_BEGIN
+Linux (none) 6.18.52-0-virt #1-Alpine SMP PREEMPT_DYNAMIC 2026-09-15 05:37:48 x86_64 Linux
+UnZip 6.00 of 20 April 2009, by Info-ZIP.  Maintained by C. Spieler.  Send
+bug reports using http://www.info-zip.org/zip-bug.html; see README for details.
+
+Archive:  /archives/original.zip
+  inflating: bin/estimate            
+ORIGINAL_EXTRACTED_MODE=644
+/init: line 18: ./bin/estimate: Permission denied
+ORIGINAL_DIRECT_EXEC_RC=126
+1+0 records in
+1+0 records out
+1 bytes (1B) copied, 0.000850 seconds, 1.1KB/s
+Archive:  /archives/fixed.zip
+  inflating: bin/estimate            
+FIXED_EXTRACTED_MODE=755
+rows=10000 cpu_seconds=2.932482 wall_seconds=2.986950 cache_enabled=1 cache_entries=10000 cache_hits=0
+FIXED_ELF_STARTED
+1fdbfef88a3ce76cad20685d66946e01bc22a46f3ed25fa72b778b50b59cbbdc  /work/fixed.csv
+/work/fixed.csv: OK
+SAME_BINARY_UNIX_ZIP_PASSED
+Archive:  /archives/new.zip
+  inflating: bin/estimate            
+NEW_EXTRACTED_MODE=755
+NEW_CASE_BEGIN_default
+rows=10000 cpu_seconds=4.997213 wall_seconds=7.054175 cache_enabled=1 cache_entries=10000 cache_hits=0 cache_disable_reason=none
+NEW_MEMORY_default VmPeak_kB=532452 VmHWM_kB=531760 VmRSS_kB=513160
+1fdbfef88a3ce76cad20685d66946e01bc22a46f3ed25fa72b778b50b59cbbdc  /work/new.csv
+/work/new.csv: OK
+NEW_CASE_PASS_default
+NEW_CASE_BEGIN_no_cache
+rows=10000 cpu_seconds=4.546743 wall_seconds=6.259714 cache_enabled=0 cache_entries=0 cache_hits=0 cache_disable_reason=none
+NEW_MEMORY_no_cache VmPeak_kB=532452 VmHWM_kB=531740 VmRSS_kB=465140
+1fdbfef88a3ce76cad20685d66946e01bc22a46f3ed25fa72b778b50b59cbbdc  /work/new.csv
+/work/new.csv: OK
+NEW_CASE_PASS_no_cache
+NEW_PACKAGE_LINUX_PASSED
+ALL_ZIP_PERMISSION_CHECKS_PASSED
+[   26.096136] reboot: Power down

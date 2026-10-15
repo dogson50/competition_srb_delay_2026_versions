@@ -1,0 +1,120 @@
+{
+  "candidate": "joint_rank12_stream_cache_safe_linux",
+  "status": "native_and_linux_checked_official_pending",
+  "created_at": "2026-10-14",
+  "package": "releases/goal_2026-10-14/cache_repair/submission_joint_rank12_stream_cache_safe_linux.zip",
+  "package_bytes": 90068344,
+  "package_sha256": "73fef4f1c9e6b1465e6518a712752aaabb0a0898a045dd3845208a2c1e53b3a5",
+  "binary_bytes": 97141664,
+  "binary_sha256": "56b6ad1941c48faf0b6d9fdd905ad41292c675f0e0616af3d0b1afacc96c328e",
+  "source_directory": "experiments/runtime_opt_2026_10_14/cache_fix",
+  "source_sha256": "65142df459420b5a9010a246b6f4a4796eb13f9c1d947364b953786b3b20b06a",
+  "model_sha256": "7fca5445bfc09f27f7a07961f99db2f39f3dc5cc4710c8423f6246884d562605",
+  "changes": [
+    "Unix ZIP creator preserves execution permissions",
+    "8 MiB streaming input replaces whole-file mmap",
+    "Cache stops at half capacity and has bounded collision probing"
+  ],
+  "public_validation": {
+    "rows": 1000000,
+    "output_sha256": "b763277418ba7be5bc8e42fcdf3dec62b196ae543b7c25a360e4f2e6f343dd34",
+    "accuracy_score": 98.5184779563,
+    "unchanged_predictions": true
+  },
+  "native_validation": "experiments/runtime_opt_2026_10_14/cache_fix/native_validation.json",
+  "format_validation": {
+    "single_entry": true,
+    "zip_crc": true,
+    "zip_create_system": 3,
+    "executable_mode": "0755",
+    "static_elf": true,
+    "elf_machine": "x86-64",
+    "package_limit": true,
+    "output_format": "From,To,Delay"
+  },
+  "linux_execution": {
+    "status": "passed",
+    "scope": "Exact packaged ELF extracted by Linux Info-ZIP and run under Alpine Linux QEMU; emulated timing is not official/native timing",
+    "package_sha256": "73fef4f1c9e6b1465e6518a712752aaabb0a0898a045dd3845208a2c1e53b3a5",
+    "binary_sha256": "56b6ad1941c48faf0b6d9fdd905ad41292c675f0e0616af3d0b1afacc96c328e",
+    "extracted_mode": "0755",
+    "chmod_needed": false,
+    "guest_memory_mib": 1536,
+    "memory_limit_bytes": 2000000000,
+    "max_observed_vm_peak_kib": 532452,
+    "max_observed_vm_hwm_kib": 531760,
+    "cases": [
+      {
+        "case": "small",
+        "rows_per_mode": 10000,
+        "modes": [
+          "default",
+          "no_cache"
+        ],
+        "request_sha256": "58c302b64436b5f66dfd8af186f5c91b85d9a114c85041472a64099b2b7f71b8",
+        "output_sha256": "1fdbfef88a3ce76cad20685d66946e01bc22a46f3ed25fa72b778b50b59cbbdc",
+        "memory": {
+          "default": {
+            "vm_peak_kib": 532452,
+            "vm_hwm_kib": 531760,
+            "sampled_rss_kib": 513160
+          },
+          "no_cache": {
+            "vm_peak_kib": 532452,
+            "vm_hwm_kib": 531740,
+            "sampled_rss_kib": 465140
+          }
+        },
+        "report": "releases/goal_2026-10-14/cache_repair/linux_validation_small.json",
+        "log": "releases/goal_2026-10-14/cache_repair/linux_validation_small.log",
+        "emulated_wall_seconds_all_checks": 27.651617600000463
+      },
+      {
+        "case": "public",
+        "rows_per_mode": 1000000,
+        "modes": [
+          "default",
+          "no_cache"
+        ],
+        "request_sha256": "2d3350b1aed4b7489fbd2fc361b2d680a422db218159a07938782ed850b4c19f",
+        "output_sha256": "b763277418ba7be5bc8e42fcdf3dec62b196ae543b7c25a360e4f2e6f343dd34",
+        "memory": {
+          "default": {
+            "vm_peak_kib": 532452,
+            "vm_hwm_kib": 531724,
+            "sampled_rss_kib": 476004
+          },
+          "no_cache": {
+            "vm_peak_kib": 532452,
+            "vm_hwm_kib": 531744,
+            "sampled_rss_kib": 528712
+          }
+        },
+        "report": "releases/goal_2026-10-14/cache_repair/linux_validation_public.json",
+        "log": "releases/goal_2026-10-14/cache_repair/linux_validation_public.log",
+        "emulated_wall_seconds_all_checks": 49.051915999967605
+      }
+    ],
+    "previous_zip_failure_reproduced": {
+      "package_sha256": "01805151dcd5d81e67ce6ff2855389883acef7a93e949aa1930f6ead69eb25d8",
+      "extracted_mode": "0644",
+      "direct_execution_returncode": 126,
+      "message": "Permission denied",
+      "official_failure_cause_confirmed": false
+    },
+    "verification_script": "tools/audit_linux_zip_modes.py",
+    "verification_script_sha256": "0e8a1dfd1191b5413714d3800f67a847ab427b6b9a9a276310f6b6e9c454d924",
+    "official_server_tested": false
+  },
+  "official_score": null,
+  "official_server_tested": false,
+  "automatic_upload": false,
+  "previous_failed_package_sha256": "01805151dcd5d81e67ce6ff2855389883acef7a93e949aa1930f6ead69eb25d8",
+  "official_rollback": "releases/optimized_2026-10-09/submission_optimized_direct_index_linux_2026-10-09.zip",
+  "build": {
+    "compiler": "Zig 0.13.0",
+    "target": "x86_64-linux-musl",
+    "cpu": "x86_64",
+    "flags": "-std=c++17 -O3 -DNDEBUG -fno-fast-math -ffp-contract=off -static"
+  }
+}

@@ -99,7 +99,7 @@ def verify() -> dict:
         "source_hash_normalization": "CRLF to LF for text; model binary unchanged",
         "source_sha256": source_hashes(),
         "runtime_retested": False,
-        "official_server_tested": False,
+        "rebuilt_binaries_official_server_tested": False,
         "versions": checks,
     }
 
